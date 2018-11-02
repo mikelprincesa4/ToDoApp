@@ -1,3 +1,14 @@
-<p>
-  to-do-list works!
-</p>
+<body>
+<h1 class ="title">{{title}}</h1>
+<ul>
+  <li class ="taskList" *ngFor="let task of tasks">
+    Task #:     {{task.taskId}}<br/>
+    <ul>
+      <li class="subtext">Task:       {{task.taskName}}<br/></li>
+      <li class="subtext">Date:       {{task.taskDate}}<br/></li>
+      <li class="subtext">Location :  {{task.taskLocation}}<br/></li>
+    </ul>
+  </li>
+</ul>
+
+</body>
