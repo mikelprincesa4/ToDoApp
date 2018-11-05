@@ -3,7 +3,7 @@
     <h1 class ="title">{{title}}</h1>
     <ul>
       <li class ="taskList" *ngFor="let task of tasks">
-        <a routerLink="details">{{task.taskName}}</a>
+        <a routerLink="/details/{{task.taskId}}">{{task.taskName}}</a>
         <ul>
           <li class="subtext">Description:       {{task.taskInfo}}<br/></li>
           <li class="subtext">Date:       {{task.taskDate}}<br/></li>
