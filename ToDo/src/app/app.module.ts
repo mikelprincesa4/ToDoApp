@@ -6,6 +6,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule, Routes} from '@angular/router';
+import { TasksService } from './tasks.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { RouterModule, Routes} from '@angular/router';
       {path: 'details/:id', component: DetailsComponent},
     ])
   ],
-  providers: [],
+  providers: [TasksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
