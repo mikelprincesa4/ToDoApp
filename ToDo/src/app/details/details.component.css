@@ -1,7 +1,7 @@
 .descriptiondiv {
     width: 600px;
-    height: 600px;
     border-radius: 25px;
+    padding: 10px;
     background: #2D2E2E;
 }
 a {
@@ -13,4 +13,29 @@ a {
 i {
   width:50px;
   height: 50px;
+}
+
+.title{
+  text-align:Center;
+  color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-left: 10px;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.details{
+  color: white;
+  list-style-type: none;
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  wordspacing: 5px;
+}
+
+li{
+  margin-bottom: 10px;
 }
