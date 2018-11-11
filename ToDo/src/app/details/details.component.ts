@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TasksService } from '../tasks.service';
+import { FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-details',
@@ -11,6 +12,8 @@ export class DetailsComponent implements OnInit {
   id: number;
   private sub: any;
   tasks = [];
+  taskForm : FormGroup;
+  newName: string;
 
   constructor(private route: ActivatedRoute, private taskService: TasksService) { }
 
@@ -19,5 +22,13 @@ export class DetailsComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
          this.id = +params['id']; // (+) converts string 'id' to a number
     });
+    this.taskForm = new FormGroup ({
+      name: new FormControl();
+    });
+  }
+
+  onSubmit(): void {
+    console.log(this.taskForm.name);
+    this.taskService.updateName("TestName", 2);
   }
 }

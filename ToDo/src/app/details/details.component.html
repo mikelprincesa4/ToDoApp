@@ -10,10 +10,13 @@
       <li>Task Info: {{tasks[id-1].taskInfo}}</li>
       <li>Task Date: {{tasks[id-1].taskDate}}</li>
       <li>Task Location: {{tasks[id-1].taskLocation}}</li>
-
     </ul>
-  </div>
-  <div class="editdiv">
-    <router-outlet></router-outlet>
+    <h2 class ="title">Edit Info</h2>
+    <form class="editPane" [formGroup]= "taskForm" (ngSubmit) = "onSubmit()">
+      Task Name:
+      <input type="text" name="TaskName" placeholder = "{{tasks[id-1].taskName}}" formControlName = "name">
+      <br> <input type="submit" value="Submit">
+    </form>
+
   </div>
 </div>

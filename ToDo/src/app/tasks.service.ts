@@ -57,5 +57,11 @@ export class TasksService {
   getTasks () {
     return this.tasks;
   }
+
+  updateName (name: string, id: number) {
+    console.log(this.name);
+    console.log(this.id);
+    this.tasks[id-1].taskName = name;
+  }
   constructor() { }
 }
