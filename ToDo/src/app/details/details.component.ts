@@ -23,12 +23,17 @@ export class DetailsComponent implements OnInit {
          this.id = +params['id']; // (+) converts string 'id' to a number
     });
     this.taskForm = new FormGroup ({
-      name: new FormControl();
+      name: new FormControl('');
+      info: new FormControl('');
+      date: new FormControl('');
+      location: new FormControl('');
     });
   }
 
   onSubmit(): void {
-    console.log(this.taskForm.name);
-    this.taskService.updateName("TestName", 2);
+    this.taskService.updateName(this.taskForm.value.name, this.id);
+    this.taskService.updateInfo(this.taskForm.value.info, this.id);
+    this.taskService.updateDate(this.taskForm.value.date, this.id);
+    this.taskService.updateLocation(this.taskForm.value.location, this.id);
   }
 }

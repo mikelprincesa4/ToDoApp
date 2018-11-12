@@ -59,9 +59,20 @@ export class TasksService {
   }
 
   updateName (name: string, id: number) {
-    console.log(this.name);
-    console.log(this.id);
     this.tasks[id-1].taskName = name;
   }
+
+  updateInfo (info: string, id: number) {
+    this.tasks[id-1].taskInfo = info;
+  }
+
+  updateDate (date: string, id: number) {
+    this.tasks[id-1].taskDate = date;
+  }
+
+  updateLocation (location: string, id: number) {
+    this.tasks[id-1].taskLocation = location;
+  }
+
   constructor() { }
 }

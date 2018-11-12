@@ -14,7 +14,13 @@
     <h2 class ="title">Edit Info</h2>
     <form class="editPane" [formGroup]= "taskForm" (ngSubmit) = "onSubmit()">
       Task Name:
-      <input type="text" name="TaskName" placeholder = "{{tasks[id-1].taskName}}" formControlName = "name">
+      <input type="text" name="TaskName" placeholder = "{{tasks[id-1].taskName}}" formControlName = "name"> <br>
+      Task Info:
+      <input type="text" name="TaskInfo" placeholder = "{{tasks[id-1].taskInfo}}" formControlName = "info"> <br>
+      Task Date:
+      <input type="text" name="TaskDate" placeholder = "{{tasks[id-1].taskDate}}" formControlName = "date"> <br>
+      Task Name:
+      <input type="text" name="TaskLocation" placeholder = "{{tasks[id-1].taskLocation}}" formControlName = "location"> <br>
       <br> <input type="submit" value="Submit">
     </form>
 
